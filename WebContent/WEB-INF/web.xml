@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>loseyourself</display-name>
+  <servlet>
+  <servlet-name>ClientServlet</servlet-name>
+  <servlet-class>com.my.controller.ClientServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ClientServlet</servlet-name>
+  <url-pattern>/seguros/clientServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>SeguroServlet</servlet-name>
+  <servlet-class>com.my.controller.SeguroServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>SeguroServlet</servlet-name>
+  <url-pattern>/seguros/seguroServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>LoginServlet</servlet-name>
+  <servlet-class>com.my.controller.LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>LoginServlet</servlet-name>
+  <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  
+ 
+  <servlet>
+  <servlet-name>ListaDeSegurados</servlet-name>
+  <servlet-class>com.my.controller.ListaDeSegurados</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ListaDeSegurados</servlet-name>
+  <url-pattern>/seguros/listaDeSegurados</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>LogoutServlet</servlet-name>
+  <servlet-class>com.my.controller.LogoutServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>LogoutServlet</servlet-name>
+  <url-pattern>/seguros/logoutServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Seguros</servlet-name>
+  <servlet-class>com.my.controller.Seguros</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Seguros</servlet-name>
+  <url-pattern>/seguros/mapearSeguros</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>ListaDeSeguros</servlet-name>
+  <servlet-class>com.my.controller.ListaDeSeguros</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ListaDeSeguros</servlet-name>
+  <url-pattern>/seguros/listaDeSeguros</url-pattern>
+  </servlet-mapping>
+  
+  	<filter>
+		<filter-name>FiltroLogin</filter-name>
+		<filter-class>com.my.services.FiltroLogin</filter-class>
+	</filter>
+	<filter-mapping>
+	   <filter-name>FiltroLogin</filter-name>
+	   <url-pattern>/seguros/*</url-pattern>
+	</filter-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    
+  </welcome-file-list>
+  
+  
+</web-app>
